@@ -1,26 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Fonts */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  
+  /* Base Colors */
+  --color-background: #111111;
+  --color-foreground: #ffffff;
+  
+  /* Card Colors */
+  --color-card: #1a1a1a;
+  --color-card-foreground: #ffffff;
+  
+  /* Popover Colors */
+  --color-popover: #1a1a1a;
+  --color-popover-foreground: #ffffff;
+  
+  /* Primary - Golden Yellow */
+  --color-primary: #ffd700;
+  --color-primary-foreground: #111111;
+  
+  /* Secondary - Dark Grey */
+  --color-secondary: #2d2d2d;
+  --color-secondary-foreground: #ffffff;
+  
+  /* Muted - Medium Grey */
+  --color-muted: #2d2d2d;
+  --color-muted-foreground: #7a7a7a;
+  
+  /* Accent - Vibrant Yellow for CTAs */
+  --color-accent: #ffc107;
+  --color-accent-foreground: #111111;
+  
+  /* Destructive */
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  
+  /* Borders & Inputs */
+  --color-border: #2d2d2d;
+  --color-input: #2d2d2d;
+  --color-ring: #ffd700;
+  
+  /* Custom Design Tokens */
+  --color-dark: #111111;
+  --color-dark-gray: #2d2d2d;
+  --color-neutral-400: #7a7a7a;
+  --color-neutral-500: #595959;
+  --color-white: #ffffff;
+  --color-golden-yellow: #ffd700;
+  --color-vibrant-yellow: #ffc107;
+  
+  /* Border Radius */
+  --radius-sm: 0px;
+  --radius: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  
+  /* Custom Utilities */
+  --gradient-arch: linear-gradient(to right, rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+                   linear-gradient(to bottom, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+  }
+  
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-background);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .bg-arch-grid {
+    background-size: 60px 60px;
+    background-image: linear-gradient(to right, rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+  }
+  
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+  }
+  
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Reveal tile animation */
+  .reveal-tile {
+    transition: opacity 0.4s ease-out, transform 0.4s ease;
+  }
+  
+  .reveal-tile.faded {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
