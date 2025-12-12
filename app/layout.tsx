@@ -20,6 +20,28 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/apple-icon.png',
   },
+  openGraph: {
+    title: "YetiGrowth - Digital Growth Agency",
+    description: "Helping businesses scale with cutting-edge web development, SEO, and digital marketing strategies.",
+    url: "https://yeti-growth.vercel.app",
+    siteName: "YetiGrowth",
+    images: [
+      {
+        url: "/og-image.png", // Must be at least 1200x630px
+        width: 1200,
+        height: 630,
+        alt: "YetiGrowth - Digital Growth Agency",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "YetiGrowth - Digital Growth Agency",
+    description: "Helping businesses scale with cutting-edge web development, SEO, and digital marketing strategies.",
+    images: ["/og-image.png"], // Same image as Open Graph
+  },
 };
 
 export default function RootLayout({
@@ -29,9 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
