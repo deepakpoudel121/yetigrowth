@@ -45,7 +45,7 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
                 >
-                  Elevation
+                  Marketing
                 </motion.span>
                 <motion.span 
                   className="block text-primary"
@@ -64,7 +64,7 @@ const Hero = () => {
                 transition={{ delay: 0.6, duration: 0.5 }}
               >
                 <p className="font-mono text-sm max-w-md text-neutral-400 font-light leading-relaxed">
-                  We are the Sherpas for your brand's digital journey. Providing strategic web development, SEO, and growth marketing for businesses across Nepal.
+                  We guide your brand up the digital mountain — with strategic web development, SEO, and growth marketing built to help businesses rise above the competition.
                 </p>
                 <motion.button 
                   onClick={scrollToContact}
