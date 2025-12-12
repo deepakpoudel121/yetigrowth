@@ -253,7 +253,7 @@ const Footer = () => {
           transition: { delay: 0.6 }
         })}
       >
-        <span>© 2024 YetiGrowth Agency.</span>
+        <span>© 2025 YetiGrowth Agency.</span>
         <span className="mt-2 md:mt-0">Designed in Nepal</span>
       </MotionWrapper>
     </footer>
