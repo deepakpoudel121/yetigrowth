@@ -85,7 +85,7 @@ const Footer = () => {
               transition: { duration: 0.5, delay: 0.3 }
             })}
           >
-            Let's discuss how we can transform your digital presence. Based in Kathmandu, serving the world.
+            Let's discuss how we can transform your digital presence. Based in Chitwan, serving the world.
           </MotionP>
           
           <MotionA 

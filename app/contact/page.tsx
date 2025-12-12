@@ -210,7 +210,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="block text-xs font-mono text-neutral-500 uppercase mb-1">Phone</span>
-                    <span className="text-white group-hover:text-primary transition-colors">+977 1234 567 890</span>
+                    <span className="text-white group-hover:text-primary transition-colors">+977 986 5505 986</span>
                   </div>
                 </motion.a>
 
@@ -221,7 +221,7 @@ export default function Contact() {
                   <div>
                     <span className="block text-xs font-mono text-neutral-500 uppercase mb-1">Office</span>
                     <span className="text-white">
-                      Thamel, Kathmandu<br />
+                      Bharatpur-10, Chitwan<br />
                       Nepal 44600
                     </span>
                   </div>
@@ -266,7 +266,7 @@ export default function Contact() {
         <section className="h-64 md:h-96 bg-secondary/30 flex items-center justify-center border-b border-white/10">
           <div className="text-center">
             <MapPin className="w-12 h-12 text-primary/30 mx-auto mb-4" />
-            <p className="text-neutral-500 font-mono text-sm">Kathmandu, Nepal</p>
+            <p className="text-neutral-500 font-mono text-sm">Chitwan, Nepal</p>
           </div>
         </section>
 
