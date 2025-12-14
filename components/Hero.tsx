@@ -15,9 +15,9 @@ const Hero = () => {
     <header id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center border-b border-white/10">
       <div className="w-full max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         {/* Left Content */}
-        <div className="flex flex-col justify-center px-4 md:px-12 py-24 md:py-32 bg-arch-grid relative z-10">
+        <div className="flex flex-col justify-center px-4 md:px-12 py-12 md:py-24 lg:py-32 bg-arch-grid relative z-10">
           <motion.div 
-            className="flex justify-between items-start w-full opacity-60 mb-auto"
+            className="flex justify-between items-start w-full opacity-60 mb-6 lg:mb-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -58,7 +58,7 @@ const Hero = () => {
               </h1>
               
               <motion.div 
-                className="mt-8 flex flex-col gap-8 border-t border-white/10 pt-8"
+                className="mt-6 md:mt-8 flex flex-col gap-6 md:gap-8 border-t border-white/10 pt-6 md:pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
@@ -82,10 +82,10 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Side - Grid Reveal with Yeti */}
-        <div className="hidden lg:flex flex-col border-l border-white/10 relative">
+        {/* Right Side - Grid Reveal with Terminal (visible on all screens) */}
+        <div className="flex flex-col border-l border-white/10 relative min-h-[400px] lg:min-h-0">
           <motion.div 
-            className="absolute top-8 right-8 opacity-60 z-20"
+            className="hidden lg:block absolute top-8 right-8 opacity-60 z-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             transition={{ delay: 0.5, duration: 0.5 }}
