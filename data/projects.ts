@@ -60,5 +60,17 @@ export const projects: Project[] = [
     featured: false,
     image: "/images/projects/chitwanjobs.png",
     url: "https://chitwanjobs.vercel.app/"
+  },
+   {
+  "slug": "moda-cafe",
+  "title": "Moda Cafe Website",
+  "category": "Web Platform",
+  "description": "A modern cafe website showcasing Mediterranean-inspired cuisine and ambiance in Bharatpur, Chitwan.",
+  "problem": "Local cafe needed an engaging online presence to showcase their unique Mediterranean dining experience and attract customers in the Chitwan region.",
+  "solution": "Built a visually appealing, responsive website with smooth animations and modern design to highlight the cafe's menu, ambiance, and 'Eat Outside The Box' philosophy.",
+  "tech": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+  "featured": true,
+  "image": "/images/projects/moda-cafe.png",
+  "url": "https://moda-cafe-design.vercel.app/"
   }
 ];
