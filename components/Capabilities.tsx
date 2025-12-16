@@ -36,7 +36,7 @@ const Capabilities = () => {
       </motion.div>
 
       <div className="p-6 md:p-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {capabilities.map((capability, index) => (
             <CapabilityCard
               key={capability.slug}
