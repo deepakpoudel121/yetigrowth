@@ -72,5 +72,18 @@ export const projects: Project[] = [
   "featured": true,
   "image": "/images/projects/moda-cafe.png",
   "url": "https://moda-cafe-design.vercel.app/"
-  }
+  },
+  {
+  "slug": "smser-two",
+  "title": "South Asia Materials Testing Laboratory Website",
+  "category": "Web Platform",
+  "description": "A professional website for a materials testing laboratory in South Asia, offering geotechnical, foundation, and non-destructive testing (NDT) services to clients in Nepal and the surrounding region.",
+  "problem": "The lab needed a clear online presence to showcase its technical services, highlight expertise in materials testing, and attract clients such as engineers, contractors, and construction firms.",
+  "solution": "Developed a responsive, professional website that highlights the lab’s core services, technical capabilities, and contact information — helping build credibility and facilitate client inquiries.",
+  "tech": ["Next.js", "React", "Tailwind CSS"],
+  "featured": false,
+  "image": "/images/projects/smser-two.png",
+  "url": "https://smser-two.vercel.app/"
+}
+
 ];
