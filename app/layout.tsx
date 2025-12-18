@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     description: "Helping businesses scale with cutting-edge web development, SEO, and digital marketing strategies.",
     images: ["/og-image.png"], // Same image as Open Graph
   },
+   verification: {
+    google: 'QO9XBRMAt28mRZFbx39FPdlABb2AZNykZWiKNsHddAk',
+  },
 };
 
 export default function RootLayout({
