@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { blogs } from "@/data/blogs";
+import { blogs } from '@/data/blogs';
 
 export default function BlogList() {
   const featuredPosts = blogs.filter(post => post.featured);
